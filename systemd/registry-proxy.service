@@ -1,0 +1,14 @@
+[Unit]
+Description=Registry Proxy Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/etc/registry-proxy
+ExecStart=/usr/local/bin/registry-proxy
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

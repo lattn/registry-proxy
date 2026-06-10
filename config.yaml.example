@@ -1,0 +1,19 @@
+listen: ":8881"
+security_key: "replace-with-a-random-secret"
+
+local_auth:
+  - username: "team-a"
+    password: "team-a-password"
+    images:
+      - "agroup/bservice"
+  - username: "team-b"
+    password: "team-b-password"
+    images:
+      - "cservice"
+
+registry_url: "https://registry.gitlab.com"
+image_prefix: "acme"
+
+registry_auth:
+  username: ""
+  password: ""
